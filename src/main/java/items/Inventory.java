@@ -160,7 +160,7 @@ public class Inventory implements Iterable<ItemStack>, Cloneable
             }
         }
 
-        if (this.slots.size() < capacity) {
+        if (!this.isFull()) {
             this.addItemStackNoCheck(stack);
             return true;
         }
