@@ -119,7 +119,11 @@ public class Inventory implements Iterable<ItemStack>, Cloneable
     public ItemStack findMatchingItemStack(ItemStack key)
     {
         // Adapt the logic from Assignment 2
-
+        for(ItemStack stack : this.slots){
+            if(stack.equals(key)){
+                return stack;
+            }
+        }
         return null;
     }
 
